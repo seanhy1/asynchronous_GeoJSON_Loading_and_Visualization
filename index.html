@@ -175,13 +175,13 @@
 
         geojsonFetch();
 
-        let btn = document.getElementsByTagName("button")[0];
+        let btn = document.getElementsByTagName("button")[1];
 
         btn.addEventListener('click', sortTable);
 
         function sortTable() {
             var table, rows, switching, i, x, y, shouldSwitch;
-            table = document.getElementById("table");
+            table = document.getElementsByTagName("table")[0];
             switching = true;
             /* Make a loop that will continue until
             no switching has been done: */
@@ -196,8 +196,8 @@
                     shouldSwitch = false;
                     /* Get the two elements you want to compare,
                     one from current row and one from the next: */
-                    x = rows[i].getElementsByTagName("td")[0];
-                    y = rows[i + 1].getElementsByTagName("td")[0];
+                    x = rows[i].getElementsByTagName("td")[1];
+                    y = rows[i + 1].getElementsByTagName("td")[1];
                     // Check if the two rows should switch place:
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                         // If so, mark as a switch and break the loop:
